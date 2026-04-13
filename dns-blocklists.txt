@@ -1,0 +1,61 @@
+# DNS Blocklist Sources
+#
+# Pi-hole / AdGuard Home の adlist (購読リスト) として登録するURL一覧
+# 各リストの特徴とドメイン数を記載
+#
+# Homepage: https://github.com/yuya4i/ad-filtering
+# Last modified: 2026-04-13
+
+# ----- 総合ブロックリスト -----
+
+# StevenBlack Unified hosts (~88k domains)
+# 広告・マルウェアの定番リスト
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+# OISD Big (~334k domains, ABP format)
+# 広告・トラッキング・マルウェアの包括的リスト
+https://big.oisd.nl/
+
+# Hagezi Multi Pro (~407k domains)
+# 高品質な総合ブロックリスト
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/pro.txt
+
+# AdAway default (~6.5k domains)
+# モバイル広告ブロックの定番
+https://adaway.org/hosts.txt
+
+# ----- 脅威対策 -----
+
+# Hagezi Threat Intelligence Feeds (~1.1M domains)
+# マルウェア・スキャム・悪質広告の脅威インテリジェンス
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt
+
+# URLhaus (~450 domains)
+# マルウェア配布URLのブロック
+https://urlhaus.abuse.ch/downloads/hostfile/
+
+# Phishing Army (~156k domains)
+# フィッシングサイトへの誘導をブロック
+https://phishing.army/download/phishing_army_blocklist.txt
+
+# ----- ポップアップ・リダイレクト広告 -----
+
+# Hagezi Pop-Up Ads (~54k domains, ABP format)
+# ポップアップ・リダイレクト広告に特化
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/popupads.txt
+
+# ----- 日本語サイト向け -----
+
+# ゆきフィルタ default (~5.2k domains, ABP format)
+# 日本語サイトの広告ブロック
+https://raw.githubusercontent.com/Yuki2718/adblock/master/japanese/jp-filters.txt
+
+# ゆきフィルタ annoyances (ABP format)
+# 日本語サイトの煩わしい要素ブロック
+https://raw.githubusercontent.com/Yuki2718/adblock/master/japanese/jp-annoyances.txt
+
+# ----- アプリ広告 -----
+
+# App Ads Blocklist (~770 domains)
+# モバイルアプリ内広告のブロック
+https://raw.githubusercontent.com/d43m0nhLInt3r/socialblocklists/master/MobileAppAds/appadsblocklist.txt

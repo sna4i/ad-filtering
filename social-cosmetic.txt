@@ -1,0 +1,15 @@
+! Social Media - Cosmetic Filters (AdGuard / uBlock Origin)
+!
+! SNS上の広告要素をブラウザレベルで非表示にするフィルター
+! AdGuard ブラウザ拡張 または uBlock Origin のユーザーフィルターに追加
+!
+! Homepage: https://github.com/yuya4i/ad-filtering
+! License: MIT
+! Last modified: 2026-04-13
+
+! ===== X.com (Twitter) =====
+! 広告ツイート (プロモーション) を非表示
+! 主フィルター: 広告にのみ存在する impression-pixel で構造判定
+x.com##div[data-testid="cellInnerDiv"]:has([data-testid="top-impression-pixel"])
+! 補完フィルター: 「広告」ラベルで判定 (本文中の「広告」は誤検知防止で除外)
+x.com##div[data-testid="cellInnerDiv"]:has(span:contains(/^広告$/)):not(:has([data-testid="tweetText"]:contains(広告)))

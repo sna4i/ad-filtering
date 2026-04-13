@@ -1,0 +1,39 @@
+# Popup & Redirect Ads - DNS Domain Blocklist
+#
+# 動画サイト等でよく見られるポップアップ広告・悪質リダイレクトをブロック
+# コンテンツ本体や動画再生に必要なドメインはブロックしない
+#
+# Pi-hole: pihole deny / pihole --wild / pihole --regex で登録
+# AdGuard Home: DNS ブロックリストとして登録
+#
+# Homepage: https://github.com/yuya4i/ad-filtering
+# Last modified: 2026-04-13
+
+# ----- ポップアップオーバーレイ -----
+# 動画再生ボタンに被せて表示される偽UIや強制遷移
+||tklivechat.com^
+||go.tklivechat.com^
+||ja.tklivechat.com^
+
+# ----- 広告アセット配信 -----
+||chapturist.com^
+
+# ----- 広告アナリティクス -----
+||strpssts-ana.com^
+
+# ----- 広告用外部スクリプト -----
+||sc-apps.com^
+
+# ----- 広告リダイレクト先 -----
+||eix304.com^
+||vx323.com^
+
+# ----- トラッキング -----
+# 動画CDN (img/edge-hls) はブロックしない
+||mmp.doppiocdn.com^
+
+# ----- 広告リダイレクト パターンルール (正規表現) -----
+# eix/vx 系ドメインは番号を変えて量産されるため正規表現で捕捉
+# Pi-hole: pihole --regex で登録
+# /(\.|^)eix[0-9]+\.com$/
+# /(\.|^)vx[0-9]+\.com$/

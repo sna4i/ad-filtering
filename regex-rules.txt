@@ -1,0 +1,30 @@
+# Regex Rules - Pattern-based DNS Blocking
+#
+# 正規表現によるパターンマッチングでドメインをブロック
+# 番号を変えて量産されるドメインやCDNパターンに対応
+#
+# Pi-hole: pihole --regex で登録
+# AdGuard Home: DNS書き換えルール (正規表現) として登録
+#
+# Homepage: https://github.com/yuya4i/ad-filtering
+# Last modified: 2026-04-13
+
+# ----- 広告リダイレクト ドメイン量産パターン -----
+# eix100.com, eix304.com, eix999.com 等
+/(\.|^)eix[0-9]+\.com$/
+
+# vx100.com, vx323.com, vx999.com 等
+/(\.|^)vx[0-9]+\.com$/
+
+# ----- YouTube 広告 -----
+# lh1~lh999.googleusercontent.com (広告サムネイル)
+/lh([1-9][0-9]{0,2})?\.googleusercontent\.com/
+
+# ----- Anker P2P テレメトリ -----
+/^p2p-.*\.anker-in\.com$/
+
+# ----- DoH/DoT バイパス防止 -----
+# Pi-hole を迂回する DNS over HTTPS/TLS をブロック
+/(^|\.)dns\.google$/
+/(^|\.)cloudflare-dns\.com$/
+/(^|\.)dns\.quad9\.net$/

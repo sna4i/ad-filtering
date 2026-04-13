@@ -1,0 +1,36 @@
+# Ad & Tracking Domains - DNS Domain Blocklist
+#
+# SNS利用に支障のない範囲でブロック可能な広告・トラッキングドメイン
+# AD Test サイトで accessible 判定を受けたドメインから選定
+#
+# Pi-hole: pihole deny で登録
+# AdGuard Home: DNS ブロックリストとして登録
+#
+# Homepage: https://github.com/yuya4i/ad-filtering
+# Last modified: 2026-04-13
+
+# ----- Google 広告/計測 -----
+||dai.google.com^
+||googleadservices.com^
+
+# ----- AppLovin (モバイル広告ネットワーク) -----
+||d.applovin.com^
+||rt.applovin.com^
+||ms.applovin.com^
+
+# ----- アナリティクス/計測 -----
+||app-measurement.com^
+||api.segment.io^
+
+# ----- エラー報告 (開発者向け・ユーザーに影響なし) -----
+||notify.bugsnag.com^
+
+# ----- テレメトリ -----
+||ngfts.lge.com^
+||settings-win.data.microsoft.com^
+
+# ----- アドウェア -----
+||greatis.com^
+
+# ----- Amazon 広告API -----
+||advertising-api-eu.amazon.com^
