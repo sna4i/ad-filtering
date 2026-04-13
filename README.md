@@ -81,6 +81,29 @@ Pi-hole / AdGuard Home     AdGuard / uBlock Origin
 - **DNS ブロック**: 広告サーバーへの接続自体を遮断。ネットワーク上の全デバイスに適用される
 - **コスメティックフィルター**: DNS ではブロックできない同一ドメイン配信の広告要素をブラウザ側で非表示にする
 
+## 参考・謝辞
+
+### DNS ブロックリスト
+
+| プロジェクト | 用途 |
+|---|---|
+| [StevenBlack/hosts](https://github.com/StevenBlack/hosts) | 広告・マルウェアの統合 hosts リスト |
+| [OISD](https://oisd.nl/) | 広告・トラッキング・マルウェアの包括的ブロックリスト |
+| [Hagezi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | Multi Pro / TIF / PopUp Ads 等の高品質リスト群 |
+| [AdAway](https://adaway.org/) | モバイル広告ブロックの定番 hosts リスト |
+| [URLhaus (abuse.ch)](https://urlhaus.abuse.ch/) | マルウェア配布 URL のデータベース |
+| [Phishing Army](https://phishing.army/) | フィッシングドメインのブロックリスト |
+| [Yuki2718/adblock](https://github.com/Yuki2718/adblock) | 日本語サイト向け広告フィルター (ゆきフィルタ) |
+| [d43m0nhLInt3r/socialblocklists](https://github.com/d43m0nhLInt3r/socialblocklists) | SNS・モバイルアプリ広告のブロックリスト |
+
+### ツール
+
+| ツール | 役割 |
+|---|---|
+| [Pi-hole](https://pi-hole.net/) | DNS レベルの広告ブロック |
+| [AdGuard](https://adguard.com/) | ブラウザレベルのコスメティックフィルタリング |
+| [uBlock Origin](https://github.com/gorhill/uBlock) | ブラウザレベルのコンテンツフィルタリング |
+
 ## License
 
 MIT
