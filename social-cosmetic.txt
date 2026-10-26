@@ -3,7 +3,7 @@
 ! SNS上の広告要素をブラウザレベルで非表示にするフィルター
 ! AdGuard ブラウザ拡張 または uBlock Origin のユーザーフィルターに追加
 !
-! Homepage: https://github.com/yuya4i/ad-filtering
+! Homepage: https://github.com/sna4i/ad-filtering
 ! License: MIT
 ! Last modified: 2026-04-13
 

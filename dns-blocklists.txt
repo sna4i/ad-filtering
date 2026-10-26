@@ -3,7 +3,7 @@
 # Pi-hole / AdGuard Home の adlist (購読リスト) として登録するURL一覧
 # 各リストの特徴とドメイン数を記載
 #
-# Homepage: https://github.com/yuya4i/ad-filtering
+# Homepage: https://github.com/sna4i/ad-filtering
 # Last modified: 2026-04-13
 
 # ----- 総合ブロックリスト -----
